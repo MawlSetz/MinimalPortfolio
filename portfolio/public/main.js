@@ -1,35 +1,34 @@
-(function($) { 
-
-  // settings
-  var $slider = $('.slider'); // class or id of carousel slider
-  var $slide = 'li'; // could also use 'img' if you're not using a ul
-  var $transition_time = 1000; // 1 second
-  var $time_between_slides = 4000; // 4 seconds
-
-  function slides(){
-    return $slider.find($slide);
+function toggleMain(direction) {
+  var slides = document.getElementsByClassName("hidden");
+  var visibleSlide = getVisible(slides);
+  //hide the currently visible LI
+  slides[visibleSlide].style.display = "none";
+  if(!direction) {
+    // get the previous slide
+    var makeVisible = previousSlide(visibleSlide, slides.length);
+  } else {
+    // get the next slide
+    var makeVisible = nextSlide(visibleSlide, slides.length);
   }
+  slides[makeVisible].style.display = "block";
+}
 
-  slides().fadeOut();
-
-  // set active classes
-  slides().first().addClass('active');
-  slides().first().fadeIn($transition_time);
-
-  // auto scroll 
-  $interval = setInterval(
-    function(){
-      var $i = $slider.find($slide + '.active').index();
-
-      slides().eq($i).removeClass('active');
-      slides().eq($i).fadeOut($transition_time);
-
-      if (slides().length == $i + 1) $i = -1; // loop to start
-
-      slides().eq($i + 1).fadeIn($transition_time);
-      slides().eq($i + 1).addClass('active');
+function getVisibleSlides(slides) {
+  var visibleSlide = -1;
+  for(var i = 0; i<= slides.length; i++) {
+    if(slides[i].style.display == "block"){
+      visibleSlide = i;
     }
-    , $transition_time +  $time_between_slides 
-  );
+  }
+  return visibleSlide;
+}
 
-});
+function previousSlide(slideId, caroselLength) {
+  if(slideId == 0) return caroselLength - 1;
+  else return slideId -1
+}
+
+function nextSlide(slideId, caroselLength) {
+  if(slideId = caroselLength -1) return 0;
+  else return slideId + 1;
+}
