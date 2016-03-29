@@ -1,6 +1,6 @@
 function toggleMain(direction) {
   var slides = document.getElementsByClassName("hidable");
-  var visibleSlide = getVisible(slides);
+  var visibleSlide = getVisibleSlides(slides);
   //hide the currently visible LI
   slides[visibleSlide].style.display = "none";
   if(!direction) {

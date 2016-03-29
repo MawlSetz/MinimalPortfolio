@@ -1,0 +1,10 @@
+
+h1.title { 
+	font-family: 'Exo 2', sans-serif;
+	font-weight: 900;
+	color: 131313;
+}
+img#main {
+	height: 50%;
+	width: 75%;
+}
