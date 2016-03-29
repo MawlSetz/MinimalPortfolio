@@ -1,10 +1,33 @@
 
-h1.title { 
-	font-family: 'Exo 2', sans-serif;
-	font-weight: 900;
-	color: 131313;
+
+img {
+	width: 100%;
 }
-img#main {
-	height: 50%;
-	width: 75%;
+h5 {
+  margin-top: 50px;
+  margin-left: 20%;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  font-size: 12px;
+  letter-spacing: .7px;
+}
+h1.title {
+	font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+	font-size: 150px;
+	letter-spacing: .4px;
+	margin-top: 12%;
+	z-index: 100;
+	position: absolute;
+	color: white;
+}
+h1.titleLower {
+	font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+	font-size: 150px;
+	letter-spacing: .4px;
+	margin-top: 20%;
+	z-index: 101;
+	position: absolute;
+	color: white;
 }
