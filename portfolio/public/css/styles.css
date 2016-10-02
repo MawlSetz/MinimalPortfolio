@@ -1,33 +1,45 @@
+img.name {
+	margin-top: -40%;
+	margin-left: 5%;
+	z-index: 100;
+	position: relative;
+	width: 40%;
 
+}
+
+div.carosel {
+	margin-top: -60%;
+}
 
 img {
 	width: 100%;
 }
-h5 {
-  margin-top: 50px;
-  margin-left: 20%;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 900;
-  font-size: 12px;
-  letter-spacing: .7px;
+
+div.row.rhine {
+	margin-top: 2%;
+	margin-left: 15%;
+	margin-right: -25%;
 }
-h1.title {
-	font-family: 'Montserrat', sans-serif;
-  font-weight: 300;
-	font-size: 150px;
-	letter-spacing: .4px;
-	margin-top: 12%;
-	z-index: 100;
-	position: absolute;
-	color: white;
+img.rhine1 {
+	margin-top: 2%;
+	margin-left: 15%;
 }
-h1.titleLower {
-	font-family: 'Montserrat', sans-serif;
-  font-weight: 300;
-	font-size: 150px;
-	letter-spacing: .4px;
-	margin-top: 20%;
-	z-index: 101;
-	position: absolute;
-	color: white;
+
+
+img.rhine2 {
+	/*width: 28%;
+	margin-left: 30%;*/
+	/*padding-top: 2%;*/
+}
+
+img.rhine3 {
+	width: 28%;
+	margin-left: 30%;
+	margin-top: -23%
+}
+
+img.rhine4 {
+	/*width: 30%;
+	margin-left: 60%;
+	margin-top: -17%;*/
 }
